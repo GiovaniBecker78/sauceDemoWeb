@@ -4,13 +4,13 @@ import PageObjects.LoginPage;
 import org.openqa.selenium.WebDriver;
 
 public class LoginTask {
-    private WebDriver dirver;
+    private WebDriver driver;
     private LoginPage loginPage;
 
     //Construtor da classe...
-    public LoginTask(WebDriver dirver){
-        this.dirver = dirver;//
-        loginPage = new LoginPage(dirver);
+    public LoginTask(WebDriver driver){
+        this.driver = driver;//
+        loginPage = new LoginPage(driver);
     }
 
     public void realizarLogin(){
@@ -18,7 +18,5 @@ public class LoginTask {
         loginPage.getPasswordTextField().sendKeys("secret_sauce");
         loginPage.getLoginButton().click();
     }
-
-
 
 }

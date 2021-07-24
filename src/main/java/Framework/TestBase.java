@@ -12,7 +12,7 @@ public class TestBase extends DriverManager{
     private static WebDriver driver;
 
     public static WebDriver getDriver(){
-        driver = getDriver(TypeDriver.CHROME);
+        driver = getDriver(TypeDriver.FIREFOX);
         return driver;
     }
 
