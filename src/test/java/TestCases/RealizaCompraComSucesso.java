@@ -17,7 +17,8 @@ public class RealizaCompraComSucesso extends TestBase {
     @Test
     public void realizarCompraComSucesso(){
         loginTask.realizarLogin();
-        inventoryTask.changeDropdownSelection();
+        //inventoryTask.changeDropdownSelection();
+        inventoryTask.selectItem();
     }
 
 }

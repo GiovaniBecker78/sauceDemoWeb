@@ -24,7 +24,7 @@ public class TestBase extends DriverManager{
 
     @AfterEach
     public void tearDown() throws Exception{
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         //Report.close();
         quitDriver();
     }

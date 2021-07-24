@@ -10,9 +10,9 @@ public class InventoryPage {
     private WebDriver driver;
     private Waits waits;
 
-    public InventoryPage(WebDriver dirver) {
+    public InventoryPage(WebDriver driver) {
         this.driver = driver;
-        waits = new Waits(dirver);
+        waits = new Waits(driver);
     }
 
 
