@@ -1,7 +1,10 @@
 package Tasks;
 
+import Framework.Report;
+import Framework.Screenshot;
 import PageObjects.InventoryItemPage;
 import PageObjects.InventoryPage;
+import com.aventstack.extentreports.Status;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,9 +31,15 @@ public class InventoryTask {
     }
 
     public void validaNextPage(){
-        String textoExtraido = inventoryItemPage.getItemNameTextField().getText();
-        Assertions.assertEquals("Sauce Labs Backpack", textoExtraido);
-    }
+        try {
+            String textoExtraido = inventoryItemPage.getItemNameTextField().getText();
+            Assertions.assertEquals("Sauce Labs Backpack", textoExtraido);
+            Report.log(Status.PASS,"Página de InventoryItemPage carregada com sucesso", Screenshot.fullPageBase64(driver));//Screenshot.fullPageBase64(driver)
+        }catch(Exception e){
+            Report.log(Status.FAIL, "Página não foi carregada", Screenshot.fullPageBase64(driver));//Screenshot.fullPageBase64(driver)
 
+        }
+
+    }
 
 }

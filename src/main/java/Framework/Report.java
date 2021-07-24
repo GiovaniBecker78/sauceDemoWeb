@@ -50,23 +50,13 @@ public class Report {
         return false;
     }
 
-//    public static void close(){
-//        if(existsInstance()){
-//            return;
-//        }
-//
-//        extent.flush();
-//    }
+    public static void close(){
+        if(existsInstance()){
+            return;
+        }
 
-
-
-
-
-
-
-
-
-
+        extent.flush();
+    }
 
 
 }
