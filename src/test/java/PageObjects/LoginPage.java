@@ -19,7 +19,7 @@ public class LoginPage {
         return waits.visibilityOfElement(By.id("user-name"));
     }
 
-    public WebElement getPassordTextField(){
+    public WebElement getPasswordTextField(){
         return waits.visibilityOfElement(By.xpath("//*[@data-test='password']"));
     }
 
