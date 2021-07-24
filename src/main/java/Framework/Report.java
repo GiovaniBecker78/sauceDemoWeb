@@ -2,6 +2,8 @@ package Framework;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityModelProvider;
+import com.aventstack.extentreports.Status;
 
 public class Report {
 
@@ -26,6 +28,35 @@ public class Report {
             ignored.printStackTrace();
         }
     }
+
+    public static void log(Status status, String message){
+        if(existsInstance()){
+            return;
+        }
+        test.get().log(status, message);
+    }
+
+    public static void log(Status status, String message, MediaEntityModelProvider capture){
+        if(existsInstance()){
+            return;
+        }
+        test.get().log(status, message, capture);
+    }
+
+    public static boolean existsInstance(){
+        if(test.get() == null){
+            return true;
+        }
+        return false;
+    }
+
+//    public static void close(){
+//        if(existsInstance()){
+//            return;
+//        }
+//
+//        extent.flush();
+//    }
 
 
 

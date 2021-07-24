@@ -21,4 +21,18 @@ public class RealizaCompraComSucesso extends TestBase {
         inventoryTask.selectItem();
     }
 
+//    @Test
+//    public void realizarCompraComSucesso2(){
+//        loginTask.realizarLogin();
+//        //inventoryTask.changeDropdownSelection();
+//        inventoryTask.selectItem();
+//    }
+//
+//    @Test
+//    public void realizarCompraComSucesso3(){
+//        loginTask.realizarLogin();
+//        //inventoryTask.changeDropdownSelection();
+//        inventoryTask.selectItem();
+//    }
+
 }
