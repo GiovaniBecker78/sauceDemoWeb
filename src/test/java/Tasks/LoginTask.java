@@ -1,6 +1,12 @@
 package Tasks;
 
+import Utils.Highlights;
+import Framework.Report;
+import Framework.Screenshot;
 import PageObjects.LoginPage;
+import Utils.FileOperations;
+import com.aventstack.extentreports.Status;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 
 public class LoginTask {
@@ -14,9 +20,38 @@ public class LoginTask {
     }
 
     public void realizarLogin(){
-        loginPage.getUsernameTextField().sendKeys("standard_user");
-        loginPage.getPasswordTextField().sendKeys("secret_sauce");
+        String user = FileOperations.getProperties("loginData").getProperty("user");
+        String password = FileOperations.getProperties("loginData").getProperty("password");
+
+        //loginPage.getUsernameTextField().sendKeys(FileOperations.getProperties("loginData").getProperty("user"));
+        //loginPage.getPasswordTextField().sendKeys(FileOperations.getProperties("loginData").getProperty("password"));
+
+        loginPage.getUsernameTextField().sendKeys(user);
+        loginPage.getPasswordTextField().sendKeys(password);
+        verificaCarregamentoLogin();
         loginPage.getLoginButton().click();
     }
+
+    public void verificaCarregamentoLogin(){
+        try{
+            boolean imagemOn = loginPage.getLoginImage().isDisplayed();
+
+            Assertions.assertTrue(imagemOn);
+            Highlights.highlighterMethod(driver, loginPage.getLoginImage(), "red");
+
+            Report.log(Status.PASS,"Confirma login com sucesso", Screenshot.fullPageBase64(driver));
+        }catch(Exception e){
+            Report.log(Status.FAIL,"Página de login não foi carregada", Screenshot.fullPageBase64(driver));
+        }
+    }
+
+    public void realizarLoginParametrizado(String usuario, String senha){
+        loginPage.getUsernameTextField().sendKeys(usuario);
+        loginPage.getPasswordTextField().sendKeys(senha);
+        verificaCarregamentoLogin();
+        loginPage.getLoginButton().click();
+    }
+
+
 
 }

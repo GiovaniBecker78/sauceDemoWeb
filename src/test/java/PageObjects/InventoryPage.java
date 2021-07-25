@@ -24,9 +24,9 @@ public class InventoryPage {
         return waits.visibilityOfElement(By.id("item_4_img_link"));
     }
 
-//    public WebElement getSauceLabsBackPackTextField(){
-//        return waits.visibilityOfElement(By.xpath("//*[@id='item_4_title_link']/div"));
-//    }
+    public WebElement getSauceLabsBackPackTextField(){
+        return waits.visibilityOfElement(By.xpath("//*[@id='item_4_title_link']/div"));
+    }
 
 
 

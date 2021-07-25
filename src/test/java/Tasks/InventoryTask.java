@@ -4,6 +4,7 @@ import Framework.Report;
 import Framework.Screenshot;
 import PageObjects.InventoryItemPage;
 import PageObjects.InventoryPage;
+import Utils.FileOperations;
 import com.aventstack.extentreports.Status;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
@@ -25,9 +26,10 @@ public class InventoryTask {
     }
 
     public void selectItem(){
+        String mochilaTexto = inventoryPage.getSauceLabsBackPackTextField().getText();
+        FileOperations.setProperties("data","itemName",mochilaTexto);
         inventoryPage.getSauceLabsBackpackImageLink().click();
         validaNextPage();
-
     }
 
     public void validaNextPage(){
@@ -39,7 +41,6 @@ public class InventoryTask {
             Report.log(Status.FAIL, "Página não foi carregada", Screenshot.fullPageBase64(driver));//Screenshot.fullPageBase64(driver)
 
         }
-
     }
 
 }

@@ -12,19 +12,19 @@ public class TestBase extends DriverManager{
     private static WebDriver driver;
 
     public static WebDriver getDriver(){
-        driver = getDriver(TypeDriver.FIREFOX);
+        driver = getDriver(TypeDriver.CHROME);
         return driver;
     }
 
     @BeforeEach
     public void setUp(){
-        getDriver().get("https://www.saucedemo.com/");
+        getDriver().get(Paths.BASE_URL);//utilizando uma classe (Paths) como datapool para modularizar os dados dos testes.
         //getDriver().get(Paths.BASE_URL);
     }
 
     @AfterEach
     public void tearDown() throws Exception{
-        Thread.sleep(500);
+        Thread.sleep(1000);
         Report.close();
         quitDriver();
     }

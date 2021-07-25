@@ -28,7 +28,9 @@ public class LoginPage {
     }
 
 
-
+    public WebElement getLoginImage(){
+        return waits.visibilityOfElement(By.xpath("//*[@class='bot_column']"));
+    }
 
 
 }
