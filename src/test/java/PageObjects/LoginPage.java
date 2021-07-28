@@ -16,19 +16,23 @@ public class LoginPage {
     }
 
     public WebElement getUsernameTextField(){
+
         return waits.visibilityOfElement(By.id("user-name"));
     }
 
     public WebElement getPasswordTextField(){
+
         return waits.visibilityOfElement(By.xpath("//*[@data-test='password']"));
     }
 
     public WebElement getLoginButton(){
+
         return waits.visibilityOfElement(By.xpath("//*[@data-test='login-button']"));
     }
 
 
     public WebElement getLoginImage(){
+
         return waits.visibilityOfElement(By.xpath("//*[@class='bot_column']"));
     }
 

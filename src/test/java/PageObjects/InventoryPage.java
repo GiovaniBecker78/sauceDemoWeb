@@ -17,16 +17,25 @@ public class InventoryPage {
 
 
     public Select getDropdownSort(){
+
         return new Select(waits.visibilityOfElement(By.className("product_sort_container")));
     }
 
     public WebElement getSauceLabsBackpackImageLink(){
+
         return waits.visibilityOfElement(By.id("item_4_img_link"));
     }
 
     public WebElement getSauceLabsBackPackTextField(){
         return waits.visibilityOfElement(By.xpath("//*[@id='item_4_title_link']/div"));
     }
+
+    public WebElement addButtonSauceLabsPack(){
+
+        return waits.visibilityOfElement(By.id("add-to-cart-sauce-labs-backpack"));
+    }
+
+
 
 
 

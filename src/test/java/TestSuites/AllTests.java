@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
 
-//@SelectPackages("TestCases")//teste por pacotes
+ @SelectPackages("TestCases")//teste por pacotes
 
-@SelectClasses({RealizaCompraComSucessoCsv.class, RealizaCompraComSucessoDataProvider.class})//Teste por classe
+//@SelectClasses({RealizaCompraComSucessoCsv.class, RealizaCompraComSucessoDataProvider.class})//Teste por classe
 
 public class AllTests {
 }

@@ -7,6 +7,7 @@ import PageObjects.InventoryPage;
 import Utils.FileOperations;
 import com.aventstack.extentreports.Status;
 import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -32,6 +33,14 @@ public class InventoryTask {
         validaNextPage();
     }
 
+    public void addItem(){
+        inventoryPage.addButtonSauceLabsPack().click();
+    }
+
+    public void cartLink(){
+        inventoryItemPage.getCartLink().click();
+    }
+
     public void validaNextPage(){
         try {
             String textoExtraido = inventoryItemPage.getItemNameTextField().getText();
@@ -42,5 +51,9 @@ public class InventoryTask {
 
         }
     }
+
+
+
+
 
 }
