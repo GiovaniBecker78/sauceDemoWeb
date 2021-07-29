@@ -14,16 +14,13 @@ public class CheckOutTwoPage {
         waits = new Waits(driver);
     }
 
-    public WebElement getTextFreeExpressDelivery(){
-        return waits.visibilityOfElement(By.xpath("//*[@class='summary_info']/div[3]"));
+    public WebElement getTextItemBuy(){
+        return waits.visibilityOfElement(By.className("header_secondary_container"));
     }
 
     public WebElement getButtonFinish(){
+
         return waits.visibilityOfElement(By.id("finish"));
     }
-
-    //*[@class='summary_info']
-
-
 
 }

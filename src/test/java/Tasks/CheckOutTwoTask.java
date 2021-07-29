@@ -1,7 +1,10 @@
 package Tasks;
 
 
+import Framework.Report;
+import Framework.Screenshot;
 import PageObjects.CheckOutTwoPage;
+import com.aventstack.extentreports.Status;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 
@@ -15,14 +18,18 @@ public class CheckOutTwoTask {
     }
 
     public void finishBuy(){
+        validaFinalCompra();
         checkOutTwoPage.getButtonFinish().click();
     }
 
-    public void getTextFreeDelivery(){
-        String textoExtraido = checkOutTwoPage.getTextFreeExpressDelivery().getText();
-        Assertions.assertEquals("FREE PONY EXPRESS DELIVERY!", textoExtraido);
+    public void validaFinalCompra(){
+        try{
+            String textoExtraido = checkOutTwoPage.getTextItemBuy().getText();
+            Assertions.assertEquals("CHECKOUT: OVERVIEW", textoExtraido);
+            Report.log(Status.PASS,"Confirmar compra efetuada. ", Screenshot.fullPageBase64(driver));
+        }catch(Exception e){
+            Report.log(Status.FAIL, "Página não carregou", Screenshot.fullPageBase64(driver));
+        }
     }
-
-
 
 }

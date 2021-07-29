@@ -18,22 +18,17 @@ public class RealizaCompraComSucesso extends TestBase {
     private CheckOutCompleteTask checkOutCompleteTask = new CheckOutCompleteTask(driver);
 
     @Test
-    public void realizarCompraComSucesso1(){
+    public void realizarCompraComSucesso(){
         try{
-            Report.createTest("Realizar Compra Com Sucesso1", ReportType.SINGLE);
-
+            Report.createTest("Realizar Compra Com Sucesso", ReportType.SINGLE);
             loginTask.realizarLogin();
-
-            //inventoryTask.changeDropdownSelection();
             inventoryTask.selectItem();
             inventoryTask.addItem();
             inventoryTask.cartLink();
+            cartTask.confirmCartPage();
             cartTask.buttonCheckout();
-            checkOutOneTask.addFirstName();
-            checkOutOneTask.addLastName();
-            checkOutOneTask.addPostalCode();
+            checkOutOneTask.informarDados();
             checkOutOneTask.buttonContinue();
-            //checkOutTwoTask.getTextFreeDelivery();
             checkOutTwoTask.finishBuy();
             checkOutCompleteTask.returnToHome();
 
@@ -41,8 +36,5 @@ public class RealizaCompraComSucesso extends TestBase {
             Report.log(Status.ERROR, e.getMessage(), Screenshot.fullPageBase64(driver));
         }
     }
-
-
-
 
 }

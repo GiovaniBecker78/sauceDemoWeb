@@ -33,6 +33,10 @@ public class CheckOutOnePage {
         return waits.visibilityOfElement(By.id("continue"));
     }
 
+    public WebElement getConfirmPageInformation(){
+        return waits.visibilityOfElement(By.id("cancel"));
+    }
+
 
 
 

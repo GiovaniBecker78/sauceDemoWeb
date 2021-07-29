@@ -12,7 +12,7 @@ public class TestBase extends DriverManager{
     private static WebDriver driver;
 
     public static WebDriver getDriver(){
-        driver = getDriver(TypeDriver.CHROME);
+        driver = getDriver(TypeDriver.FIREFOX);
         return driver;
     }
 
@@ -24,8 +24,8 @@ public class TestBase extends DriverManager{
 
     @AfterEach
     public void tearDown() throws Exception{
-        Thread.sleep(5000);
-        Report.close();
+        Thread.sleep(500);
+        Report.close();//fecha as ações do report após os testes
         quitDriver();
     }
 

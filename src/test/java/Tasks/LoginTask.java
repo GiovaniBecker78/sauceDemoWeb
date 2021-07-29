@@ -41,7 +41,7 @@ public class LoginTask {
             Assertions.assertTrue(imagemOn);
             Highlights.highlighterMethod(driver, loginPage.getLoginImage(), "red");
 
-            Report.log(Status.PASS,"Confirma login com sucesso", Screenshot.fullPageBase64(driver));
+            Report.log(Status.PASS,"Confirmar login com sucesso. ", Screenshot.fullPageBase64(driver));
         }catch(Exception e){
             Report.log(Status.FAIL,"Página de login não foi carregada", Screenshot.fullPageBase64(driver));
         }

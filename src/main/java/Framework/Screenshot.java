@@ -18,7 +18,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
-public class Screenshot {
+public class Screenshot {//classe para captura de imagens para o relatório
 
     private static final String PATH_SCREENSHOT = ReportFactory.PATH_REPORT + File.separator + "Screenshot";
 
