@@ -62,5 +62,5 @@ $ yarn install
 
 # iniciar o projeto
 $ yarn start
-```
+`````
 
