@@ -7,9 +7,7 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # Relatórios
-Report
-
-
+/Report
 
 # User-specific stuff
 .idea/**/workspace.xml
