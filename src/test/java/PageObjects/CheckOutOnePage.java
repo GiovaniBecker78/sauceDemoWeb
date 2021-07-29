@@ -9,13 +9,10 @@ public class CheckOutOnePage {
     private final WebDriver driver;
     private final Waits waits;
 
-    //Construtor da classe...
     public CheckOutOnePage(WebDriver driver){
         this.driver = driver;
         waits = new Waits(driver);
     }
-
-
 
     public WebElement getFirstName(){
         return waits.visibilityOfElement(By.id("first-name"));
@@ -36,10 +33,5 @@ public class CheckOutOnePage {
     public WebElement getConfirmPageInformation(){
         return waits.visibilityOfElement(By.id("cancel"));
     }
-
-
-
-
-
 
 }

@@ -23,7 +23,4 @@ public class InventoryItemPage {
         return waits.visibilityOfElement(By.className("shopping_cart_link"));
     }
 
-
-
-
 }

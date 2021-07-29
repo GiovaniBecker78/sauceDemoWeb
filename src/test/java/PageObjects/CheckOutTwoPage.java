@@ -19,7 +19,6 @@ public class CheckOutTwoPage {
     }
 
     public WebElement getButtonFinish(){
-
         return waits.visibilityOfElement(By.id("finish"));
     }
 

@@ -16,6 +16,4 @@ public class CheckOutCompleteTask {
         checkOutCompletePage.getButtonComplete().click();
     }
 
-
-
 }

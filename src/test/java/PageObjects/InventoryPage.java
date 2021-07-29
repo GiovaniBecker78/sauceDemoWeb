@@ -15,14 +15,11 @@ public class InventoryPage {
         waits = new Waits(driver);
     }
 
-
     public Select getDropdownSort(){
-
         return new Select(waits.visibilityOfElement(By.className("product_sort_container")));
     }
 
     public WebElement getSauceLabsBackpackImageLink(){
-
         return waits.visibilityOfElement(By.id("item_4_img_link"));
     }
 
@@ -31,7 +28,6 @@ public class InventoryPage {
     }
 
     public WebElement addButtonSauceLabsPack(){
-
         return waits.visibilityOfElement(By.id("add-to-cart-sauce-labs-backpack"));
     }
 

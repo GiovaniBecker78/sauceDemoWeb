@@ -18,5 +18,4 @@ public class CheckOutCompletePage {
         return waits.visibilityOfElement(By.id("back-to-products"));
     }
 
-
 }

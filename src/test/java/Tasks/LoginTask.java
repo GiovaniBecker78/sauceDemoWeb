@@ -25,9 +25,6 @@ public class LoginTask {
         String user = FileOperations.getProperties("loginData").getProperty("user");
         String password = FileOperations.getProperties("loginData").getProperty("password");
 
-        //loginPage.getUsernameTextField().sendKeys(FileOperations.getProperties("loginData").getProperty("user"));
-        //loginPage.getPasswordTextField().sendKeys(FileOperations.getProperties("loginData").getProperty("password"));
-
         loginPage.getUsernameTextField().sendKeys(user);
         loginPage.getPasswordTextField().sendKeys(password);
         verificaCarregamentoLogin();
@@ -37,10 +34,8 @@ public class LoginTask {
     public void verificaCarregamentoLogin(){
         try{
             boolean imagemOn = loginPage.getLoginImage().isDisplayed();
-
             Assertions.assertTrue(imagemOn);
             Highlights.highlighterMethod(driver, loginPage.getLoginImage(), "red");
-
             Report.log(Status.PASS,"Confirmar login com sucesso. ", Screenshot.fullPageBase64(driver));
         }catch(Exception e){
             Report.log(Status.FAIL,"Página de login não foi carregada", Screenshot.fullPageBase64(driver));
@@ -53,9 +48,5 @@ public class LoginTask {
         verificaCarregamentoLogin();
         loginPage.getLoginButton().click();
     }
-
-
-
-
 
 }

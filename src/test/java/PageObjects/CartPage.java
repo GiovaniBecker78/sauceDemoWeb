@@ -9,7 +9,6 @@ public class CartPage {
     private final WebDriver driver;
     private final Waits waits;
 
-    //Construtor da classe...
     public CartPage(WebDriver driver){
         this.driver = driver;
         waits = new Waits(driver);
@@ -23,9 +22,5 @@ public class CartPage {
     public WebElement getConfirmPageCart(){
         return waits.visibilityOfElement(By.className("title"));// //*[@class='title']
     }
-
-
-
-
 
 }

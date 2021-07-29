@@ -9,8 +9,12 @@ import java.io.File;
 public class ReportFactory {
     public static WebDriver driver;
 
-    public static final String PATH_REPORT = System.getProperty("user.dir") + File.separator + "Report" +
-            File.separator + "Report_" + DateTime.getDateTimeFormatReport();
+    public static final String PATH_REPORT = System.getProperty("user.dir") +
+            File.separator +
+            "Report" +
+            File.separator +
+            "Report_" +
+            DateTime.getDateTimeFormatReport();
 
     public static ExtentHtmlReporter htmlReporter;
     public static ExtentReports extentReports;
@@ -25,8 +29,12 @@ public class ReportFactory {
     public static void configReportExtent(){
         CreateFolder.createFolderReport(PATH_REPORT);
 
-        htmlReporter = new ExtentHtmlReporter(PATH_REPORT + File.separator + "MyReport_" +
-                DateTime.getDateTimeFormatReport() + ".html");
+        htmlReporter = new ExtentHtmlReporter(PATH_REPORT +
+                File.separator +
+                "MyReport_" +
+                DateTime.getDateTimeFormatReport() +
+                ".html");
+
         htmlReporter.config().setDocumentTitle("Relatório de Execução da Automação (Document Title)");
         htmlReporter.config().setReportName("Relatório de Execução dos testes (Report name)");
         htmlReporter.config().setTheme(Theme.DARK);
@@ -36,7 +44,6 @@ public class ReportFactory {
         htmlReporter.config().setJS("$('.brand-logo').html('<img src=\"https://i.imgur.com/qDYwkD2.png\" class=\"db-logo\"/>');");
 
         extentReports = new ExtentReports();
-
         extentReports.attachReporter(htmlReporter);
     }
 

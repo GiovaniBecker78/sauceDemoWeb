@@ -10,7 +10,6 @@ public class Waits {
     private WebDriver driver;
     private WebDriverWait wait;
 
-
     public Waits(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver, 10);
@@ -23,4 +22,5 @@ public class Waits {
     public WebElement loadElement(WebElement element){
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
+
 }

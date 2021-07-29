@@ -18,14 +18,13 @@ public class TestBase extends DriverManager{
 
     @BeforeEach
     public void setUp(){
-        getDriver().get(Paths.BASE_URL);//utilizando uma classe (Paths) como datapool para modularizar os dados dos testes.
-        //getDriver().get(Paths.BASE_URL);
+        getDriver().get(Paths.BASE_URL);
     }
 
     @AfterEach
     public void tearDown() throws Exception{
         Thread.sleep(500);
-        Report.close();//fecha as ações do report após os testes
+        Report.close();
         quitDriver();
     }
 

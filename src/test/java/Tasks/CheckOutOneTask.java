@@ -12,7 +12,6 @@ public class CheckOutOneTask {
     private WebDriver driver;
     private CheckOutOnePage checkOutOnePage;
 
-
     public CheckOutOneTask(WebDriver driver) {
         this.driver = driver;
         checkOutOnePage = new CheckOutOnePage(driver);
@@ -37,7 +36,6 @@ public class CheckOutOneTask {
         }catch(Exception e){
             Report.log(Status.FAIL,"página não carregou!", Screenshot.fullPageBase64(driver));
         }
-
     }
 
 }

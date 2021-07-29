@@ -19,7 +19,7 @@ public class FakerGenerator {
         return faker.phoneNumber().phoneNumber();
     }
 
-   public static String getPostalCode(){
+    public static String getPostalCode(){
         return faker.address().zipCode();
     }
 

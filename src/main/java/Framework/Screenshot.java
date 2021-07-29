@@ -42,7 +42,6 @@ public class Screenshot {//classe para captura de imagens para o relatório
         try{
             PageSnapshot screenshot = Shutterbug.shootPage((driver));
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
-
             ImageIO.write(screenshot.getImage(), "png", stream);
             String base64image = Base64.encodeBase64String(stream.toByteArray());
 
@@ -51,7 +50,7 @@ public class Screenshot {//classe para captura de imagens para o relatório
             String message = "Ocorreu uma falha na captura de tela.";
             Report.log(Status.WARNING, message);
         }
-
         return null;
     }
+
 }

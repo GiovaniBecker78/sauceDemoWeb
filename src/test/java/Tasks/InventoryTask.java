@@ -23,7 +23,7 @@ public class InventoryTask {
     }
 
     public void changeDropdownSelection(){
-        inventoryPage.getDropdownSort().selectByValue("hilo");/*.selectByIndex(2);*/
+        inventoryPage.getDropdownSort().selectByValue("hilo");
     }
 
     public void selectItem(){
@@ -45,15 +45,11 @@ public class InventoryTask {
         try {
             String textoExtraido = inventoryItemPage.getItemNameTextField().getText();
             Assertions.assertEquals("Sauce Labs Backpack", textoExtraido);
-            Report.log(Status.PASS,"Confirmar item selecionado. ", Screenshot.fullPageBase64(driver));//Screenshot.fullPageBase64(driver)
+            Report.log(Status.PASS,"Confirmar item selecionado. ", Screenshot.fullPageBase64(driver));
         }catch(Exception e){
-            Report.log(Status.FAIL, "Página não foi carregada", Screenshot.fullPageBase64(driver));//Screenshot.fullPageBase64(driver)
+            Report.log(Status.FAIL, "Página não foi carregada", Screenshot.fullPageBase64(driver));
 
         }
     }
-
-
-
-
 
 }
