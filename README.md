@@ -1,6 +1,6 @@
-# sauceDemoWeb
+# Projeto sauceDemoWeb
 
-#titulo
+#Objetivo: Efetuar compra de um produto com sucesso
 
 ##subtitulo
 - caso 1
