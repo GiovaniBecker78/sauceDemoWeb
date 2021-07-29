@@ -3,6 +3,7 @@ package Tasks;
 import Framework.Report;
 import Framework.Screenshot;
 import PageObjects.CheckOutOnePage;
+import Utils.FakerGenerator;
 import com.aventstack.extentreports.Status;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
@@ -18,9 +19,9 @@ public class CheckOutOneTask {
     }
 
     public void informarDados(){
-        checkOutOnePage.getFirstName().sendKeys("Giovani");
-        checkOutOnePage.getLastName().sendKeys("Becker");
-        checkOutOnePage.getPostalCode().sendKeys("91795-430");
+        checkOutOnePage.getFirstName().sendKeys(FakerGenerator.getFirstName());
+        checkOutOnePage.getLastName().sendKeys(FakerGenerator.getLastName());
+        checkOutOnePage.getPostalCode().sendKeys(FakerGenerator.getPostalCode());
         validaDadosInformados();
     }
 
