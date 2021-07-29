@@ -1,19 +1,19 @@
-##Projeto sauceDemoWeb
+## Projeto sauceDemoWeb
 
-###Índice
+#### Índice
 - [Sobre](#-sobre)
 - [Tecnologias](#-tecnologias-utilizadas)
 - [Design Pattern](#-design-pattern)
 - [Estrutura de diretórios](#-estrutura-de-diretórios)
 ---
-####Sobre
+#### Sobre
 O projeto sauceDemoWeb foi criado durante a capacitação de automatizadores de testes QA.
 Tem o objetivo de efetuar a compra de um produto no site,
 através de interações totalmente automatizadas, validar asserções
 e extrair relatório, utilizando na prática as diversas
 técnicas abordadas durtante o curso.
 ---
-####Tecnologias utilizadas
+#### Tecnologias utilizadas
 O projeto foi construído em Maven utilizando diversas tecnologias como:</p>
 - [Intellij IDEA](https://www.jetbrains.com/idea/download/)
 - [Java](https://www.java.com/pt-BR/)
@@ -27,13 +27,13 @@ O projeto foi construído em Maven utilizando diversas tecnologias como:</p>
 - [ExtentReport](https://mvnrepository.com/search?q=extentreports)
 - [JavaFaker](https://mvnrepository.com/artifact/com.github.javafaker)
 ---
-####Design Pattern
+#### Design Pattern
 O padrão de projeto escolhido foi o PageObjects
 pois é um dos mais utilizados para testes automatizados e
 possui uma melhor estrutura de diretórios e organização
 das funções de cada classe dentro do código de testes.
 ---
-####Estrutura de diretórios
+#### Estrutura de diretórios
 - sauceDemoWeb
   - .idea
   - src
