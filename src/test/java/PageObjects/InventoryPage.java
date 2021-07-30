@@ -27,10 +27,6 @@ public class InventoryPage {
         return waits.visibilityOfElement(By.xpath("//*[@id='item_4_title_link']/div"));
     }
 
-    public WebElement addButtonSauceLabsPack(){
-        return waits.visibilityOfElement(By.id("add-to-cart-sauce-labs-backpack"));
-    }
-
 
 
 

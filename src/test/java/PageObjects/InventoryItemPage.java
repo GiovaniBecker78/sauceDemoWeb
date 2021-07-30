@@ -18,6 +18,10 @@ public class InventoryItemPage {
         return waits.visibilityOfElement(By.cssSelector(".inventory_details_name.large_size"));//'.' antes e no espaço entre name e large
     }
 
+    public WebElement addButtonSauceLabsPack(){
+        return waits.visibilityOfElement(By.id("add-to-cart-sauce-labs-backpack"));
+    }
+
     public WebElement getCartLink(){
 
         return waits.visibilityOfElement(By.className("shopping_cart_link"));

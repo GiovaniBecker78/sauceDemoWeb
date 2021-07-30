@@ -7,7 +7,7 @@
 - [Estrutura de diretórios](#-estrutura-de-diretórios)
 ---
 #### Sobre
-O projeto sauceDemoWeb foi criado durante a capacitação de automatizadores de testes QA.
+#### O projeto sauceDemoWeb foi criado durante a capacitação de automatizadores de testes QA.
 Tem o objetivo de efetuar a compra de um produto no site,
 através de interações totalmente automatizadas, validar asserções
 e extrair relatório, utilizando na prática as diversas

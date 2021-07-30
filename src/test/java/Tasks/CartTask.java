@@ -17,10 +17,11 @@ public class CartTask {
     }
 
     public void buttonCheckout(){
+
         cartPage.getButtonCheckout().click();
     }
 
-    public void confirmCartPage(){
+    public void confirmaPaginaCarrinho(){
         cartPage.getConfirmPageCart().getText();
         validaCartPage();
     }

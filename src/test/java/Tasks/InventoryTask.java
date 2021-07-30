@@ -34,10 +34,12 @@ public class InventoryTask {
     }
 
     public void addItem(){
-        inventoryPage.addButtonSauceLabsPack().click();
+
+        inventoryItemPage.addButtonSauceLabsPack().click();
     }
 
     public void cartLink(){
+
         inventoryItemPage.getCartLink().click();
     }
 
