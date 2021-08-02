@@ -11,14 +11,15 @@ import java.util.Locale;
 
 public class CheckOutOneTask {
     private WebDriver driver;
-    private CheckOutOnePage checkOutOnePage;
+    private CheckOutOnePage checkOutOnePage;//isso
 
-    public CheckOutOneTask(WebDriver driver) {
+    public CheckOutOneTask(WebDriver driver) {//construtor aqui e bla bla
         this.driver = driver;
         checkOutOnePage = new CheckOutOnePage(driver);
     }
+//entendeu o javafaker?
 
-    public void informarDados(){
+    public void dataInfo(){
         checkOutOnePage.getFirstName().sendKeys(FakerGenerator.getFirstName());
         checkOutOnePage.getLastName().sendKeys(FakerGenerator.getLastName());
         checkOutOnePage.getPostalCode().sendKeys(FakerGenerator.getPostalCode());

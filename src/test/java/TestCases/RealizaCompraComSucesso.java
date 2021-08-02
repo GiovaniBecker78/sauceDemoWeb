@@ -27,11 +27,11 @@ public class RealizaCompraComSucesso extends TestBase {
             inventoryTask.cartLink();
             cartTask.confirmaPaginaCarrinho();
             cartTask.buttonCheckout();
-            checkOutOneTask.informarDados();
+            checkOutOneTask.dataInfo();
             checkOutOneTask.buttonContinue();
             checkOutTwoTask.finishBuy();
             checkOutCompleteTask.returnToHome();
-
+//vou rodar pra ti ver
         }catch(Exception e){
             Report.log(Status.ERROR, e.getMessage(), Screenshot.fullPageBase64(driver));
         }

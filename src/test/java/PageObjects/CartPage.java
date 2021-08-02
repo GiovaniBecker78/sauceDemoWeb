@@ -15,8 +15,8 @@ public class CartPage {
     }
 
     public WebElement getButtonCheckout(){
-
         return waits.visibilityOfElement(By.id("checkout"));
+
     }
 
     public WebElement getConfirmPageCart(){

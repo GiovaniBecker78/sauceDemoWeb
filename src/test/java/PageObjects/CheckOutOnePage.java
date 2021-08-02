@@ -15,10 +15,12 @@ public class CheckOutOnePage {
     }
 
     public WebElement getFirstName(){
+
         return waits.visibilityOfElement(By.id("first-name"));
     }
 
     public WebElement getLastName(){
+
         return waits.visibilityOfElement(By.id("last-name"));
     }
 
@@ -31,7 +33,7 @@ public class CheckOutOnePage {
     }
 
     public WebElement getConfirmPageInformation(){
-        return waits.visibilityOfElement(By.id("cancel"));
+        return waits.visibilityOfElement(By.id("cancel"));//não é cancelar...é só pra pegar imagem
     }
 
 }
